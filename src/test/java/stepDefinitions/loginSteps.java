@@ -16,6 +16,7 @@ public class loginSteps {
 	public loginSteps()
 	{
 		driver = hooks.driver;
+		
 	
 	}
 	
@@ -30,7 +31,7 @@ public class loginSteps {
 	public void user_clicks_on_Administrator_Login_button() throws Throwable {
 	    
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.findElement(By.linkText("Administrator Login")).click();
+		driver.findElement(By.xpath("//*[@id=\"login-toggle\"]")).click();
 	   
 	}
 
@@ -45,8 +46,8 @@ public class loginSteps {
 	public void User_enters_valid_username_and_password() throws Throwable {
 		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
 		
-		***REMOVED***
-	   ***REMOVED***
+		driver.findElement(By.id("username")).sendKeys("test");
+	   driver.findElement(By.id("password")).sendKeys("test1234");
 	  
 	}
 
